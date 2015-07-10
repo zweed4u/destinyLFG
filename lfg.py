@@ -147,7 +147,7 @@ except:
 	print str(gamertag)
 	print str(description)
 	print "~~~EXCEPTION~~~\n"
-	#if raised outputs product id and page url w/ redirection (if any)
+
 	print "No users are running    -> " + str(activity) +" <-    - "+ str(br.geturl())+"\n"
 	#os.system("pause")
 
