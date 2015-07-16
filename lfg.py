@@ -6,42 +6,65 @@ import html2text
 import re
 import sys
 
-
+class color:
+		PURPLE = '\033[95m'
+		CYAN = '\033[96m'
+		DARKCYAN = '\033[36m'
+		BLUE = '\033[94m'
+		GREEN = '\033[92m'
+		YELLOW = '\033[93m'
+		RED = '\033[91m'
+		BOLD = '\033[1m'
+		UNDERLINE = '\033[4m'
+		END = '\033[0m'
 
 
 
 print ""
-print 'Activity? (atheon h, templar h, conflux h, oracles h, gorgon h, crota n, ir yut n, crota h, 32poe, 34,poe, 35poe, nf) '
+print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Templar (HARD)\n3.) Defend the Confluxes (HARD)\n4.) Oracles (HARD)\n5.) Gorgon Maze (HARD)\n6.) Crota Boss (NORM)\n7.) Ir Yut, the Deathsinger (NORM)\n8.) Crota Boss (HARD)\n9.) Lvl 32 Prison of Elders\n10.) Lvl 34 Prison of Elders\n11.) Lvl 35 Prison of Elders\n12.) Weekly Nightfall Stike \n\nPlease enter a number: '
 activity = raw_input('')
-
 print ""
+
 				
-if activity == "atheon h":
+if activity == "1":
 	act = 'Vault+of+Glass+-+Hard+(Atheon)'
-elif activity == "templar h":
+	activity = "Atheon (HARD)"
+elif activity == "2":
 	act = 'Vault+of+Glass+-+Hard+(Templar)'
-elif activity == "conflux h":
+	activity = "Templar (HARD)"
+elif activity == "3":
 	act = 'Vault+of+Glass+-+Hard+(Conflux)'
-elif activity == "oracles h":
+	activity = "Defend the Confluxes (HARD)"
+elif activity == "4":
 	act = 'Vault+of+Glass+-+Hard+(Oracles)'
-elif activity == "gorgon h":
+	activity = "Oracles (HARD)"
+elif activity == "5":
 	act = 'Vault+of+Glass+-+Hard+(Gorgon%27s+Labyrinth)'
-elif activity == "crota n":
+	activity = "Gorgon Maze (HARD)"
+elif activity == "6":
 	act = 'Crota%27s+End+-+Normal+(Crota)'
-elif activity == "ir yut n":
+	activity = "Crota Boss (NORM)"
+elif activity == "7":
 	act = 'Crota%27s+End+-+Normal+(Deathsingers)'
-elif activity == "crota h":
+	activity = "Ir Yut, the Deathsinger (NORM)"
+elif activity == "8":
 	act = 'Crota%27s+End+-+Hard+(Crota)'
-elif activity == "32poe":
+	activity = "Crota Boss (HARD)"
+elif activity == "9":
 	act = 'Prison+of+Elders+-+Lvl+32'
-elif activity == "34poe":
+	activity = "Lvl 32 Prison of Elders"
+elif activity == "10":
 	act = 'Prison+of+Elders+-+Lvl+34'
-elif activity == "35poe":
+	activity = "Lvl 34 Prison of Elders"
+elif activity == "11":
 	act = 'Prison+of+Elders+-+Lvl+35'
-elif activity == "nf":
+	activity = "Lvl 35 Prison of Elders"
+elif activity == "12":
 	act = 'Weekly+Nightfall+Strike'
+	activity = "Weekly Nightfall Stike"
 else:
-	print "Rerun and enter one of the above"
+	print "Rerun and enter one of the listed numbers above..."
+	sys.exit()
 
 i=0
 url=""
@@ -76,18 +99,11 @@ br.addheaders = [('User-agent', 'Chrome')]
 
 
 try:
-
-	#act = 'Social' #TEST~~~~~~~~~~~~
+	#Setting act variable for testing purposes...
+	#act = 'Social' 
 	url = "http://www.destinylfg.com/php/search.php?console=Xbox+360&activity="+str(act)+"&textSearch=&mic=false&lfg_type=%25"
 	
 	br.open(str(url))
-	# Inspect name of the form
-	# Select the second (index one) form - the first form is a search query box
-
-
-	#br.select_form(nr=0)
-		    
-	#scrape page for anything in span tag
 	htmltext = br.open(str(url)).read()
 
 	regex='<kbd>(.+?)</kbd>'
@@ -119,37 +135,20 @@ try:
 	timestamp = re.findall(pattern6,htmltext)
 	
 	
-	
-	class color:
-		PURPLE = '\033[95m'
-		CYAN = '\033[96m'
-		DARKCYAN = '\033[36m'
-		BLUE = '\033[94m'
-		GREEN = '\033[92m'
-		YELLOW = '\033[93m'
-		RED = '\033[91m'
-		BOLD = '\033[1m'
-		UNDERLINE = '\033[4m'
-		END = '\033[0m'
-
-	#print url
 
 	print color.UNDERLINE + color.BOLD + title[0] + color.END
-	'''print amount
-	print str(gamertag)
-	print i'''
+
 	while i < amount:
 		print "GT: "+str(gamertag[i])+"\nClass: "+str(char[i])+"\nLevel: "+str(level[i])+"\nDescription: "+str(description[i])+"\nTimestamp: "+str(timestamp[i])+"\n\n"
 		i+=1
 		
 
 except:
-	print str(gamertag)
-	print str(description)
+	print "Gamertags found: "+str(gamertag)
+	print "Descriptions found: "+str(description)
 	print "~~~EXCEPTION~~~\n"
-
 	print "No users are running    -> " + str(activity) +" <-    - "+ str(br.geturl())+"\n"
-	#os.system("pause")
+	sys.exit()
 
 
 
