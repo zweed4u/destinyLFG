@@ -17,9 +17,32 @@ class color:
 		BOLD = '\033[1m'
 		UNDERLINE = '\033[4m'
 		END = '\033[0m'
-
-
-
+print "\n"
+print "  ____            _   _             _     _____ ____	"
+print " |  _ \  ___  ___| |_(_)_ __  _   _| |   |  ___/ ___|	"
+print " | | | |/ _ \/ __| __| | '_ \| | | | |   | |_ | |  _ 	"
+print " | |_| |  __/\__ \ |_| | | | | |_| | |___|  _|| |_| |	"
+print " |____/ \___||___/\__|_|_| |_|\__, |_____|_|   \____|	"
+print "                              |___/                  	"
+print "                                            		"         
+print "           ````                   `````     		"         
+print "        .sdNMMNds:`           `-+hNMMMmy:   		"     
+print "       :NMMMMMMMMMN` `+yhho-  dMMMMMMMMMMo  		"     
+print "       yMMMMMMMMMMM. dMMMMMN. NMMMMMMMMMMN`  		"     
+print "       +NMMMMMMMMMM. MMMMMMM/ NMMMMMMMMMMh   		"     
+print "        :hNMMMMMMMM.`MMMMMMM/ NMMMMMMMNd+`   	 	"     
+print "          .+dMMMMMM- MMMMMMM/ NMMMMMms-`    		"     
+print "            `:hMMMM+ hMMMMMm..MMMMm+`       		"     
+print "               /mMMN+.+yyyo-:dMMMs`         		"     
+print "                .mMMMmyooosdNMMN/           		"     
+print "                 -NMMMMMMMMMMMM+            		"     
+print "                  sMMMMMMMMMMMm             		"     
+print "                  .MMMMMMMMMMMo             		"     
+print "                   mMMMMMMMMMM-             		"     
+print "                   oMMMMMMMMMh              		"     
+print "                    +mMMMMMNs`              		"     
+print "                      .:::-`                		"     
+print ""
 print ""
 print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Templar (HARD)\n3.) Defend the Confluxes (HARD)\n4.) Oracles (HARD)\n5.) Gorgon Maze (HARD)\n6.) Crota Boss (NORM)\n7.) Ir Yut, the Deathsinger (NORM)\n8.) Crota Boss (HARD)\n9.) Lvl 32 Prison of Elders\n10.) Lvl 34 Prison of Elders\n11.) Lvl 35 Prison of Elders\n12.) Weekly Nightfall Stike \n\nPlease enter a number: '
 activity = raw_input('')
