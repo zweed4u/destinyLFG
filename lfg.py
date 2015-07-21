@@ -44,6 +44,25 @@ print "                    +mMMMMMNs`              		"
 print "                      .:::-`                		"     
 print ""
 print ""
+
+print color.UNDERLINE+color.BOLD+'Console?'+color.END+'\n1.) PS3\n2.) PS4\n3.) xBox 360\n4.) xBox One\n\nPlease enter a number: '
+
+console = raw_input('')
+print ""
+
+if console == "1":
+	con = 'PS3'
+elif console == "2":
+	con = 'PS4'
+elif console == "3":
+	con = 'Xbox+360'
+elif console == "4":
+	con = 'Xbox+One'
+else:
+	print "Rerun and enter one of the listed numbers above..."
+	sys.exit()
+
+
 print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Templar (HARD)\n3.) Defend the Confluxes (HARD)\n4.) Oracles (HARD)\n5.) Gorgon Maze (HARD)\n6.) Crota Boss (NORM)\n7.) Ir Yut, the Deathsinger (NORM)\n8.) Crota Boss (HARD)\n9.) Lvl 32 Prison of Elders\n10.) Lvl 34 Prison of Elders\n11.) Lvl 35 Prison of Elders\n12.) Weekly Nightfall Stike\n13.) Trials of Osiris \n\nPlease enter a number: '
 
 
@@ -132,7 +151,7 @@ br.addheaders = [('User-agent', 'Chrome')]
 try:
 	#Setting act variable for testing purposes...
 	#act = 'Social' 
-	url = "http://www.destinylfg.com/php/search.php?console=Xbox+360&activity="+str(act)+"&textSearch=&mic=false&lfg_type=%25"
+	url = "http://www.destinylfg.com/php/search.php?console="+str(con)+"&activity="+str(act)+"&textSearch=&mic=false&lfg_type=%25"
 	
 	br.open(str(url))
 	htmltext = br.open(str(url)).read()
