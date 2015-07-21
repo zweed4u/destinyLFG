@@ -191,7 +191,7 @@ try:
 	while i < amount:
 		print "GT: "+str(gamertag[i])+"\nClass: "+str(char[i])+"\nLevel: "+str(level[i])+"\nDescription: "+str(description[i])+"\nTimestamp: "+str(timestamp[i])+"\n\n"
 		i+=1
-		
+ 		
 
 except:
 	print "Gamertags found: "+str(gamertag)
