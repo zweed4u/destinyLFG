@@ -147,7 +147,6 @@ br.addheaders = [('User-agent', 'Chrome')]
 
 
 
-
 try:
 	#Setting act variable for testing purposes...
 	#act = 'Social' 
