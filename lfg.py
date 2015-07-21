@@ -44,7 +44,11 @@ print "                    +mMMMMMNs`              		"
 print "                      .:::-`                		"     
 print ""
 print ""
-print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Templar (HARD)\n3.) Defend the Confluxes (HARD)\n4.) Oracles (HARD)\n5.) Gorgon Maze (HARD)\n6.) Crota Boss (NORM)\n7.) Ir Yut, the Deathsinger (NORM)\n8.) Crota Boss (HARD)\n9.) Lvl 32 Prison of Elders\n10.) Lvl 34 Prison of Elders\n11.) Lvl 35 Prison of Elders\n12.) Weekly Nightfall Stike \n\nPlease enter a number: '
+print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Templar (HARD)\n3.) Defend the Confluxes (HARD)\n4.) Oracles (HARD)\n5.) Gorgon Maze (HARD)\n6.) Crota Boss (NORM)\n7.) Ir Yut, the Deathsinger (NORM)\n8.) Crota Boss (HARD)\n9.) Lvl 32 Prison of Elders\n10.) Lvl 34 Prison of Elders\n11.) Lvl 35 Prison of Elders\n12.) Weekly Nightfall Stike\n13.) Trials of Osiris \n\nPlease enter a number: '
+
+
+
+
 activity = raw_input('')
 print ""
 
@@ -85,9 +89,13 @@ elif activity == "11":
 elif activity == "12":
 	act = 'Weekly+Nightfall+Strike'
 	activity = "Weekly Nightfall Stike"
+elif activity == "13":
+	act= 'Trials+of+Osiris+-+Competitive'
+	activity = "Trials of Osiris"
 else:
 	print "Rerun and enter one of the listed numbers above..."
 	sys.exit()
+
 
 i=0
 url=""
