@@ -144,7 +144,7 @@ br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 
 # User-Agent (this is cheating, ok?)
-br.addheaders = [('User-agent', 'Chrome')]
+br.addheaders = [('User-agent', 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; AskTB5.6)')]
 
 
 
@@ -152,7 +152,7 @@ try:
 	#Setting act variable for testing purposes...
 	#act = 'Social' 
 	url = "http://www.destinylfg.com/php/search.php?console="+str(con)+"&activity="+str(act)+"&textSearch=&mic=false&lfg_type=%25&light=%25"
-	
+	print url
 	br.open(str(url))
 	htmltext = br.open(str(url)).read()
 
