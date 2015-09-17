@@ -63,7 +63,7 @@ else:
 	sys.exit()
 
 #need to update
-print color.UNDERLINE+color.BOLD+'Activity?'+color.END+"\n1.) Atheon (HARD)\n2.) Crota Boss (NORM)\n3.) Crota Boss (HARD)\n4.) Prison of Elders\n5.) Weekly Nightfall Stike\n6.) Daily Heroic\n7.) King's Fall Full Raid (NORM)\n8.) King's Fall Oryx (NORM)\n9.) King's Fall Full Raid (HARD)\n10.) King's Fall Oryx (HARD)\n11.) Court of Oryx Tier 1\n12.) Court of Oryx Tier 2\n13.) Court of Oryx Tier 3 \n\nPlease enter a number: "
+print color.UNDERLINE+color.BOLD+'Activity?'+color.END+"\n1.) VoG Full Raid (HARD)\n2.) Atheon (HARD)\n3.) Crota's End Full Raid (NORM)\n4.) Crota Boss (NORM)\n5.) Crota Boss (HARD)\n6.) Prison of Elders\n7.) Weekly Nightfall Stike\n8.) Daily Heroic\n9.) King's Fall Full Raid (NORM)\n10.) King's Fall Oryx (NORM)\n11.) King's Fall Full Raid (HARD)\n12.) King's Fall Oryx (HARD)\n13.) Court of Oryx Tier 1\n14.) Court of Oryx Tier 2\n15.) Court of Oryx Tier 3\n16.) Patrol Dreadnaught\n17.) Trials of Osiris \n\nPlease enter a number: "
 
 
 activity = raw_input('')
@@ -72,48 +72,54 @@ print ""
 #need to update/add php links - 2.0	
 # INCLUDE full raids and checkpoints of year 1		
 if activity == "1":
+	act = 'Vault+of+Glass+-+Hard+(Full+Raid)'
+	activity = "VoG Full Raid (HARD)"
+elif activity == "2":
 	act = 'Vault+of+Glass+-+Hard+(Atheon)'
 	activity = "Atheon (HARD)"
-elif activity == "2":
+elif activity == "3":
+	act = 'Crota%27s+End+-+Normal+(Full+Raid)'
+	activity = "Crota's End Full Raid (NORM)"
+elif activity == "4":
 	act = 'Crota%27s+End+-+Normal+(Crota)'
 	activity = "Crota Boss (NORM)"
-elif activity == "3":
+elif activity == "5":
 	act = 'Crota%27s+End+-+Hard+(Crota)'
 	activity = "Crota Boss (HARD)"
-elif activity == "4":
+elif activity == "6":
 	act = 'Prison+of+Elders'
 	activity = "Prison of Elders"
-elif activity == "5":
+elif activity == "7":
 	act = 'Nightfall'
 	activity = "Weekly Nightfall Stike"
-elif activity == "6":
+elif activity == "8":
 	act = 'Daily+-+Heroic+Story'
 	activity = "Daily Heroic"
-elif activity == "7":
+elif activity == "9":
 	act = 'King%27s+Fall+-+Normal+(Full+Raid)'
 	activity = "King's Fall Full Raid (NORM)"
-elif activity == "8":
+elif activity == "10":
 	act = 'King%27s+Fall+-+Normal+(Oryx)'
 	activity = "King's Fall Oryx (NORM)"
-elif activity == "9":
+elif activity == "11":
 	act = 'King%27s+Fall+-+Hard+(Full+Raid)'
 	activity = "King's Fall Full Raid (HARD)"
-elif activity == "10":
+elif activity == "12":
 	act = 'King%27s+Fall+-+Hard+(Oryx)'
 	activity = "King's Fall Oryx (HARD)"
-elif activity == "11":
+elif activity == "13":
 	act = 'Court+of+Oryx+T1'
 	activity = "Court of Oryx Tier 1"
-elif activity == "12":
+elif activity == "14":
 	act = 'Court+of+Oryx+T2'
 	activity = "Court of Oryx Tier 2"
-elif activity == "13":
+elif activity == "15":
 	act = 'Court+of+Oryx+T3'
 	activity = "Court of Oryx Tier 3"
-elif activity == "12":
+elif activity == "16":
 	act = 'Patrol+-+Dreadnaught'
 	activity = "Patrol Dreadnaught"
-elif activity == "13":
+elif activity == "17":
 	act = 'PvP+-+Trials+of+Osiris'
 	activity = "Trials of Osiris"
 
@@ -191,12 +197,15 @@ try:
 	pattern6 = re.compile(regex6)
 	timestamp = re.findall(pattern6,htmltext)
 	
+	regex7='<span class="light">(.+?)</span>'
+	pattern7 = re.compile(regex7)
+	light = re.findall(pattern7,htmltext)
 	
 
 	print color.UNDERLINE + color.BOLD + title[0] + color.END
 
 	while i < amount:
-		print "GT: "+str(gamertag[i])+"\nClass: "+str(char[i])+"\nLevel: "+str(level[i])+"\nDescription: "+str(description[i])+"\nTimestamp: "+str(timestamp[i])+"\n\n"
+		print "GT: "+str(gamertag[i])+"\nClass: "+str(char[i])+"\nLevel: "+str(level[i])+"\nLight: "+str(light[i])+"\nDescription: "+str(description[i])+"\nTimestamp: "+str(timestamp[i])+"\n\n"
 		i+=1
  		
 
