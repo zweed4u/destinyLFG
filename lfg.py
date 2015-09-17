@@ -152,7 +152,8 @@ try:
 	#Setting act variable for testing purposes...
 	#act = 'Social' 
 	url = "http://www.destinylfg.com/php/search.php?console="+str(con)+"&activity="+str(act)+"&textSearch=&mic=false&lfg_type=%25&light=%25"
-	print url
+	#nice check of php link->
+	#print url
 	br.open(str(url))
 	htmltext = br.open(str(url)).read()
 
