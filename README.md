@@ -9,6 +9,9 @@ This python script is a scraper that makes use of a backend php link that querie
 Issues:  
 Updating support for all consoles presented a problem in that parsing a large group of listings caused the scrape to trip up and cause the description to match with the proper listing. Near updates will be focused on proper exception handling and attempts to resolve this. As it is now, I display all entries in an array after the pretty print in an exception to cover all bases.  
 
+#Taken King 2.0 release!
+With the celebration of year 2, many things have been added and/or modified. This has also subsequently rendered some of the functionality temporarily broken. Fixes will be on the way.  
+
 
 
 Contact me with any questions: @ZWeed4U
