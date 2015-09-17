@@ -50,7 +50,6 @@ print color.UNDERLINE+color.BOLD+'Console?'+color.END+'\n1.) PS3\n2.) PS4\n3.) x
 console = raw_input('')
 print ""
 
-#need to update
 if console == "1":
 	con = 'PS3'
 elif console == "2":
@@ -58,60 +57,68 @@ elif console == "2":
 elif console == "3":
 	con = 'XB360'
 elif console == "4":
-	con = 'Xbox+One'
+	con = 'XB1'
 else:
 	print "Rerun and enter one of the listed numbers above..."
 	sys.exit()
 
 #need to update
-print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Templar (HARD)\n3.) Defend the Confluxes (HARD)\n4.) Oracles (HARD)\n5.) Gorgon Maze (HARD)\n6.) Crota Boss (NORM)\n7.) Ir Yut, the Deathsinger (NORM)\n8.) Crota Boss (HARD)\n9.) Lvl 32 Prison of Elders\n10.) Lvl 34 Prison of Elders\n11.) Lvl 35 Prison of Elders\n12.) Weekly Nightfall Stike\n13.) Trials of Osiris \n\nPlease enter a number: '
-
-
+print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Crota Boss (NORM)\n3.) Crota Boss (HARD)\n4.)Prison of Elders\5.) Weekly Nightfall Stike\n\nPlease enter a number: '
 
 
 activity = raw_input('')
 print ""
 
-#need to update php links			
+#need to update/add php links - 2.0			
 if activity == "1":
 	act = 'Vault+of+Glass+-+Hard+(Atheon)'
 	activity = "Atheon (HARD)"
 elif activity == "2":
-	act = 'Vault+of+Glass+-+Hard+(Templar)'
-	activity = "Templar (HARD)"
-elif activity == "3":
-	act = 'Vault+of+Glass+-+Hard+(Conflux)'
-	activity = "Defend the Confluxes (HARD)"
-elif activity == "4":
-	act = 'Vault+of+Glass+-+Hard+(Oracles)'
-	activity = "Oracles (HARD)"
-elif activity == "5":
-	act = 'Vault+of+Glass+-+Hard+(Gorgon%27s+Labyrinth)'
-	activity = "Gorgon Maze (HARD)"
-elif activity == "6":
 	act = 'Crota%27s+End+-+Normal+(Crota)'
 	activity = "Crota Boss (NORM)"
-elif activity == "7":
-	act = 'Crota%27s+End+-+Normal+(Deathsingers)'
-	activity = "Ir Yut, the Deathsinger (NORM)"
-elif activity == "8":
+elif activity == "3":
 	act = 'Crota%27s+End+-+Hard+(Crota)'
 	activity = "Crota Boss (HARD)"
-elif activity == "9":
-	act = 'Prison+of+Elders+-+Lvl+32'
-	activity = "Lvl 32 Prison of Elders"
-elif activity == "10":
-	act = 'Prison+of+Elders+-+Lvl+34'
-	activity = "Lvl 34 Prison of Elders"
-elif activity == "11":
-	act = 'Prison+of+Elders+-+Lvl+35'
-	activity = "Lvl 35 Prison of Elders"
-elif activity == "12":
-	act = 'Weekly+Nightfall+Strike'
+elif activity == "4":
+	act = 'Prison+of+Elders'
+	activity = "Prison of Elders"
+elif activity == "5":
+	act = 'Nightfall'
 	activity = "Weekly Nightfall Stike"
+
+''' INCLUDE full raids and checkpoints as well as court of oryx
+elif activity == "6":
+	act = 'Daily+-+Heroic+Story'
+	activity = "Daily Heroic"
+elif activity == "7":
+	act = 'King%27s+Fall+-+Normal+(Full+Raid)'
+	activity = "King's Fall Full Raid (NORM)"
+elif activity == "8":
+	act = 'King%27s+Fall+-+Normal+(Oryx)'
+	activity = "King's Fall Oryx (NORM)"
+elif activity == "9":
+	act = 'King%27s+Fall+-+Hard+(Full+Raid)'
+	activity = "King's Fall Full Raid (HARD)"
+elif activity == "10":
+	act = 'King%27s+Fall+-+Hard+(Oryx)'
+	activity = "King's Fall Oryx (HARD)"
+elif activity == "11":
+	act = 'Court+of+Oryx+T1'
+	activity = "Court of Oryx Tier 1"
+elif activity == "12":
+	act = 'Court+of+Oryx+T2'
+	activity = "Court of Oryx Tier 2"
 elif activity == "13":
-	act= 'Trials+of+Osiris+-+Competitive'
+	act = 'Court+of+Oryx+T3'
+	activity = "Court of Oryx Tier 3"
+elif activity == "12":
+	act = 'Patrol+-+Dreadnaught'
+	activity = "Patrol Dreadnaught"
+elif activity == "13":
+	act = 'PvP+-+Trials+of+Osiris'
 	activity = "Trials of Osiris"
+'''
+
 else:
 	print "Rerun and enter one of the listed numbers above..."
 	sys.exit()
