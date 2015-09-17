@@ -63,13 +63,14 @@ else:
 	sys.exit()
 
 #need to update
-print color.UNDERLINE+color.BOLD+'Activity?'+color.END+'\n1.) Atheon (HARD)\n2.) Crota Boss (NORM)\n3.) Crota Boss (HARD)\n4.)Prison of Elders\5.) Weekly Nightfall Stike\n\nPlease enter a number: '
+print color.UNDERLINE+color.BOLD+'Activity?'+color.END+"\n1.) Atheon (HARD)\n2.) Crota Boss (NORM)\n3.) Crota Boss (HARD)\n4.) Prison of Elders\n5.) Weekly Nightfall Stike\n6.) Daily Heroic\n7.) King's Fall Full Raid (NORM)\n8.) King's Fall Oryx (NORM)\n9.) King's Fall Full Raid (HARD)\n10.) King's Fall Oryx (HARD)\n11.) Court of Oryx Tier 1\n12.) Court of Oryx Tier 2\n13.) Court of Oryx Tier 3 \n\nPlease enter a number: "
 
 
 activity = raw_input('')
 print ""
 
-#need to update/add php links - 2.0			
+#need to update/add php links - 2.0	
+# INCLUDE full raids and checkpoints of year 1		
 if activity == "1":
 	act = 'Vault+of+Glass+-+Hard+(Atheon)'
 	activity = "Atheon (HARD)"
@@ -85,8 +86,6 @@ elif activity == "4":
 elif activity == "5":
 	act = 'Nightfall'
 	activity = "Weekly Nightfall Stike"
-
-''' INCLUDE full raids and checkpoints as well as court of oryx
 elif activity == "6":
 	act = 'Daily+-+Heroic+Story'
 	activity = "Daily Heroic"
@@ -117,7 +116,7 @@ elif activity == "12":
 elif activity == "13":
 	act = 'PvP+-+Trials+of+Osiris'
 	activity = "Trials of Osiris"
-'''
+
 
 else:
 	print "Rerun and enter one of the listed numbers above..."
