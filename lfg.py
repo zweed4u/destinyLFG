@@ -1,10 +1,4 @@
-import mechanize
-import urllib
-import cookielib
-import BeautifulSoup
-import html2text
-import re
-import sys
+import mechanize, urllib, cookielib, BeautifulSoup, html2text, re, sys
 
 class color:
 		PURPLE = '\033[95m'
@@ -59,8 +53,8 @@ elif console == "3":
 elif console == "4":
 	con = 'XB1'
 else:
-	print "Rerun and enter one of the listed numbers above..."
-	sys.exit()
+	print 'Searching all...'
+	con = '%25'
 
 #need to update
 print color.UNDERLINE+color.BOLD+'Activity?'+color.END+"\n1.) VoG Full Raid (HARD)\n2.) Atheon (HARD)\n3.) Crota's End Full Raid (NORM)\n4.) Crota Boss (NORM)\n5.) Crota Boss (HARD)\n6.) Prison of Elders\n7.) Weekly Nightfall Stike\n8.) Daily Heroic\n9.) King's Fall Full Raid (NORM)\n10.) King's Fall Oryx (NORM)\n11.) King's Fall Full Raid (HARD)\n12.) King's Fall Oryx (HARD)\n13.) Court of Oryx Tier 1\n14.) Court of Oryx Tier 2\n15.) Court of Oryx Tier 3\n16.) Patrol Dreadnaught\n17.) Trials of Osiris \n\nPlease enter a number: "
@@ -125,8 +119,9 @@ elif activity == "17":
 
 
 else:
-	print "Rerun and enter one of the listed numbers above..."
-	sys.exit()
+	print "Returning all categories..."
+	act = '%25'
+	activity="All"
 
 
 i=0
@@ -138,17 +133,12 @@ br = mechanize.Browser()
 
 
 # Cookie Jar
-cj = cookielib.LWPCookieJar()
-br.set_cookiejar(cj)
+cj = cookielib.LWPCookieJar();br.set_cookiejar(cj)
 
 
 
 # Browser options
-br.set_handle_equiv(True)
-br.set_handle_gzip(False)
-br.set_handle_redirect(True)
-br.set_handle_referer(True)
-br.set_handle_robots(False)
+br.set_handle_equiv(True);br.set_handle_gzip(False);br.set_handle_redirect(True);br.set_handle_referer(True);br.set_handle_robots(False)
 
 
 
@@ -156,7 +146,7 @@ br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 
 # User-Agent (this is cheating, ok?)
-br.addheaders = [('User-agent', 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; AskTB5.6)')]
+br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/37.0.2062.120 Chrome/37.0.2062.120 Safari/537.36')]
 
 
 
